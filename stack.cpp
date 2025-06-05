@@ -69,11 +69,12 @@ public:
     }
 };
 
-int main(){
+int main()
+{
     stack stack;
 
     int choice = 0;
-    int value ;
+    int value;
 
     while (choice != 4)
     {
@@ -82,30 +83,33 @@ int main(){
         cout << "3. peek\n";
         cout << "4. exit\n";
         cout << "5. enter your choice\n";
-        cin >> choice ;
-    }
+        cin >> choice;
 
-    switch (choice)
-    {
+        switch (choice)
+        {
         case 1:
-        cout << "enter the value to push: ";
-        cin >> value ;
-        stack.push(value);
-        break;
+            cout << "enter the value to push: ";
+            cin >> value;
+            stack.push(value);
+            break;
 
         case 2:
-        stack.pop(value);
-        break;
+            stack.pop();
+            break;
 
         case 3:
-        stack.pop();
-        break;
+            stack.pop();
+            break;
 
         case 4:
-        cout << "exiting program. "<< endl;
-        break;
-        default :
-        cout << "invalid choice. Try again. "<< endl;
-        break;
+            cout << "exiting program. " << endl;
+            break;
+        default:
+            cout << "invalid choice. Try again. " << endl;
+            break;
+        }
+        cout << endl;
     }
+
+
 }
