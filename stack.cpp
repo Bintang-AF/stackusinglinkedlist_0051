@@ -38,4 +38,11 @@ class stack
     {
         return top == NULL;
     }
+
+    void pop()
+    {
+        if(isEmpty())
+        cout << "stack is empty."<<endl;
+        return;
+    }
 };
