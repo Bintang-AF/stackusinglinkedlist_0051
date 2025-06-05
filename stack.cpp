@@ -45,4 +45,25 @@ class stack
         cout << "stack is empty."<<endl;
         return;
     }
+    cout << "Popped value: " << top -> data << endl;
+    top = top->next;
 };
+
+
+void peek()
+{
+    if (isEmpty())
+    {
+        cout << "list is empty." << endl; 
+    }
+    else
+    {
+        Node *current = top;
+        while (current != NULL)
+        {
+            cout << current-> data << " " << endl;
+            current = current ->next;
+        }
+        cout << endl;
+    }
+}
