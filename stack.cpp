@@ -78,5 +78,6 @@ int main(){
     while (choice != 4)
     {
         cout << "1. push\n";
+        cout << "2. pop\n";
     }
 }
