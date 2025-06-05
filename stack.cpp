@@ -23,3 +23,6 @@ class stack
     {
         top = NULL;
     }
+
+    int push(int value)
+    
