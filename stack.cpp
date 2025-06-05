@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-class Node 
+class Node
 {
-    public :
-    int data ;
+public:
+    int data;
     Node *next;
 
-    Node ()
+    Node()
     {
         next = NULL;
     }
@@ -15,10 +15,10 @@ class Node
 
 class stack
 {
-    private :
+private:
     Node *top;
 
-    public :
+public:
     stack()
     {
         top = NULL;
@@ -26,12 +26,12 @@ class stack
 
     int push(int value)
     {
-        Node *newNode = new Node ();
-        newNode -> data = value;
-        newNode -> next = top;
-        top = newNode ;
+        Node *newNode = new Node();
+        newNode->data = value;
+        newNode->next = top;
+        top = newNode;
         cout << "push value: " << value << endl;
-        return value ;
+        return value;
     }
 
     bool isEmpty()
@@ -41,29 +41,37 @@ class stack
 
     void pop()
     {
-        if(isEmpty())
-        cout << "stack is empty."<<endl;
-        return;
+        if (isEmpty())
+        {
+            cout << "stack is empty." << endl;
+            return;
+        }
+        cout << "Popped value: " << top->data << endl;
+        top = top->next;
     }
-    cout << "Popped value: " << top -> data << endl;
-    top = top->next;
+
+    void peek()
+    {
+        if (isEmpty())
+        {
+            cout << "list is empty." << endl;
+        }
+        else
+        {
+            Node *current = top;
+            while (current != NULL)
+            {
+                cout << current->data << " " << endl;
+                current = current->next;
+            }
+            cout << endl;
+        }
+    }
 };
 
+int main(){
+    stack stack;
 
-void peek()
-{
-    if (isEmpty())
-    {
-        cout << "list is empty." << endl; 
-    }
-    else
-    {
-        Node *current = top;
-        while (current != NULL)
-        {
-            cout << current-> data << " " << endl;
-            current = current ->next;
-        }
-        cout << endl;
-    }
+    int choice = 0;
+    int value ;
 }
