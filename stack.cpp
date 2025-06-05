@@ -92,9 +92,13 @@ int main(){
         cin >> value ;
         stack.push(value);
         break;
-        
+
         case 2:
         stack.pop(value);
+        break;
+
+        case 3:
+        stack.pop();
         break;
     }
 }
