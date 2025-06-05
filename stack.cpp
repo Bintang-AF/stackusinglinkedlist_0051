@@ -100,5 +100,9 @@ int main(){
         case 3:
         stack.pop();
         break;
+
+        case 4:
+        cout << "exiting program. "<< endl;
+        break;
     }
 }
