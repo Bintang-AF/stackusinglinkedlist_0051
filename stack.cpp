@@ -104,5 +104,8 @@ int main(){
         case 4:
         cout << "exiting program. "<< endl;
         break;
+        default :
+        cout << "invalid choice. Try again. "<< endl;
+        break;
     }
 }
